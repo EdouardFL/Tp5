@@ -56,12 +56,14 @@ class MyGame(arcade.Window):
        Configurer les variables de votre jeu ici. Il faut appeler la méthode une nouvelle
        fois si vous recommencer une nouvelle partie.
        """
+
+       self.player = arcade.Sprite("Assets/faceBeard.png", 0.5, 0, 0)
+       self.computer = arcade.Sprite("Assets/compy.png", 1, 0, 0)
+
+
+
        # C'est ici que vous allez créer vos listes de sprites et vos sprites.
        # Prenez note que vous devriez attribuer une valeur à tous les attributs créés dans __init__
-
-       pass
-
-
 
    def validate_victory(self):
        """
@@ -115,6 +117,9 @@ class MyGame(arcade.Window):
                         60,
                         width=SCREEN_WIDTH,
                         align="center")
+
+       self.player.draw()
+       self.computer.draw()
 
        #self.draw_instructions()
        #self.players.draw()
