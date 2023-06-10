@@ -1,5 +1,8 @@
 from enum import Enum
 
 class GameState(Enum):
-    def __int__(self):
-        NOT_STARTED = 0
+    """Les games states possibles dans le jeu, hérite de la classe Enum"""
+    NOT_STARTED = 0
+    GAME_OVER = 1
+    ROUND_ACTIVE = 2
+    ROUND_DONE = 3
